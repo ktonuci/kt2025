@@ -1,0 +1,141 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background color for the entire body */
+body { 
+    background: #7B9E89;
+}
+
+/* Wrapper settings for full-width content */
+.wrapper {
+    width: 100%;
+}
+
+/* Initially hides the image banner */
+.img-banner {
+    display: none;
+}
+
+/* Ensures the image takes up full width */
+.img-info {
+    width: 100%;
+}
+
+/* Styles for the heading inside .img-info */
+.img-info h2 {
+    padding: 30px 30px 20px; /* Adds padding around the heading */
+    font-family: "Atma", system-ui; /* Specifies font family */
+    font-weight: 400; /* Sets font weight */
+    font-style: normal; /* Sets font style */
+    font-size: 50px; /* Sets font size */
+    line-height: 50px; /* Sets line height */
+    color: #fff200; /* Text color */
+}
+      
+/* Styles for the paragraph inside .img-info */
+.img-info p {
+    padding: 0px 30px 20px; /* Adds padding around the paragraph */
+    font-family: "Roboto Flex", sans-serif; /* Font family */
+    font-optical-sizing: auto; /* Automatic optical sizing */
+    font-style: normal; /* Sets font style */
+    font-size: 16px; /* Sets font size */
+    line-height: 20px; /* Sets line height */
+    color: #fff200; /* Text color */
+}     
+
+/* Ensures the image takes up full width */
+.img-TonuciK_fearandloathing {
+    width: 100%;
+}
+
+/* Styles for the button element */
+.enter-btn {
+    display: block; /* Makes it a block-level element */
+    margin: 30px auto 0; /* Centers the button */
+    width: 150px; /* Sets width */
+    cursor: pointer; /* Changes cursor on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on the enter button */
+.enter-btn:hover {
+    transform: rotate(15deg); /* Rotates the button on hover */
+}
+
+/* Media queries for responsiveness */
+
+/* Styles for screens with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+    /* Displays the banner image */
+    .img-banner {
+        display: block;
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    /* Limits wrapper width and centers it */
+    .wrapper {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Adjusts heading padding */
+    .img-info h2 {
+        padding: 20px 0px 0px;
+    }
+
+    /* Adjusts paragraph padding */
+    .img-info p {
+        padding: 20px 0px 0px;
+    }     
+
+    /* Adds padding to the image */
+    .img-TonuciK_fearandloathing {
+        padding-top: 30px;
+    }   
+
+    /* Adjusts the size of the button */
+    .enter-btn {
+        width: 200px;
+    }
+}
+
+/* Styles for screens with a minimum width of 1000px */
+@media only screen and (min-width: 1000px) {
+
+    /* Expands the wrapper width */
+    .wrapper {
+        width: 1000px;
+    } 
+
+    /* Adjusts image and text layout */
+    .img-info {
+        width: 50%;
+        float: right;
+    }
+
+    /* Adds padding to the heading */
+    .img-info h2 {
+        padding: 20px 0px 0px 30px;
+    }
+
+    /* Adds padding to the paragraph */
+    .img-info p {
+        padding: 20px 0px 0px 30px;
+    }  
+
+    /* Adjusts image padding and layout */
+    .img-TonuciK_fearandloathing {
+        padding-top: 0px;
+        width: 50%;
+        float: left;
+    }
+
+    /* Expands the button width */
+    .enter-btn {
+        width: 250px;
+    }   
+}
