@@ -27,7 +27,7 @@
     </nav>
     
     <section class="gallery-header">
-        <h2>The Gallery!</h2>
+        <h2 id="typewriter">The Gallery!</h2>
     </section>
     
     <div class="gallery">
@@ -105,7 +105,25 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 Krista Tonuci</p>
+                <p>&copy; 2025 Krista Tonuci</p>
     </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+<script>
+    $(document).ready(function() {
+    var text = $("#typewriter").text(); // Get the text of the header
+    $("#typewriter").text(''); // Clear the existing text
+
+    var i = 0; // Start counter for letters
+    function typeWriter() {
+        if (i < text.length) {
+            $("#typewriter").append(text.charAt(i)); // Append each letter one by one
+            i++;
+            setTimeout(typeWriter, 150); // Add delay to make it look like typing
+        }
+    }
+
+    typeWriter(); // Call the function to start the typing effect
+});
+</script>
 </body>
 </html>
