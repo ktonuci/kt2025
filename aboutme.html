@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="img-banner" src="img/TonuciK_Banner.png" alt="Krista Tonuci banner">
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="aboutme.html" class="active">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="gallery-header">
+        <h2 id="typewriter">The Artist!</h2>
+    </section>
+
+    <section class="about-me">
+         <div class="about-container">
+                <img src="img/selfportrait.jpg" alt="Me" class="about-img">
+                <p class="about-paragraph">Well, hi there! I'm Krista, the artist behind the illustrations. As you can see, I'm a big fan of music, movies, fun illustrations, and bright pops of color. And, yes, in case you were wondering: that mullet is real.</p>
+            </div>
+        </section>
+   
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <p>&copy; 2025 Krista Tonuci</p>
+    </footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="back-to-top-btn">↑</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+<script>
+    $(document).ready(function() {
+    var text = $("#typewriter").text(); // Get the text of the header
+    $("#typewriter").text(''); // Clear the existing text
+
+    var i = 0; // Start counter for letters
+    function typeWriter() {
+        if (i < text.length) {
+            $("#typewriter").append(text.charAt(i)); // Append each letter one by one
+            i++;
+            setTimeout(typeWriter, 150); // Add delay to make it look like typing
+        }
+    }
+
+    typeWriter(); // Call the function to start the typing effect
+
+// Show the back-to-top button when scrolling down
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 200) { // Show button after scrolling 200px
+        $('#back-to-top').fadeIn();
+    } else {
+        $('#back-to-top').fadeOut();
+    }
+});
+
+// Smooth scroll back to top when the button is clicked
+$('#back-to-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 600); // Scroll duration: 600ms
+    return false;
+    });
+});
+</script>
+</body>
+</html>

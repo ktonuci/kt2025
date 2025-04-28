@@ -1,3 +1,11 @@
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
 /* General reset for margin and padding */
 * {
     margin: 0;
@@ -26,24 +34,24 @@ body {
 
 /* Styles for the heading inside .img-info */
 .img-info h2 {
-    padding: 30px 30px 20px; /* Adds padding around the heading */
-    font-family: "Atma", system-ui; /* Specifies font family */
-    font-weight: 400; /* Sets font weight */
-    font-style: normal; /* Sets font style */
-    font-size: 50px; /* Sets font size */
-    line-height: 50px; /* Sets line height */
-    color: #fff200; /* Text color */
+    padding: 30px 30px 20px;
+    font-family: "Atma", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 50px;
+    color: #fff200;
 }
       
 /* Styles for the paragraph inside .img-info */
 .img-info p {
-    padding: 0px 30px 20px; /* Adds padding around the paragraph */
-    font-family: "Roboto Flex", sans-serif; /* Font family */
-    font-optical-sizing: auto; /* Automatic optical sizing */
-    font-style: normal; /* Sets font style */
-    font-size: 16px; /* Sets font size */
-    line-height: 20px; /* Sets line height */
-    color: #fff200; /* Text color */
+    padding: 0px 30px 20px;
+    font-family: "Roboto Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff200;
 }     
 
 /* Ensures the image takes up full width */
@@ -53,89 +61,131 @@ body {
 
 /* Styles for the button element */
 .enter-btn {
-    display: block; /* Makes it a block-level element */
-    margin: 30px auto 0; /* Centers the button */
-    width: 150px; /* Sets width */
-    cursor: pointer; /* Changes cursor on hover */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    display: block;
+    margin: 30px auto 0;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Hover effect on the enter button */
 .enter-btn:hover {
-    transform: rotate(15deg); /* Rotates the button on hover */
+    animation: wiggle 0.6s ease-in-out; /* Apply the wiggle animation on hover */
 }
 
 /* Media queries for responsiveness */
-
-/* Styles for screens with a minimum width of 768px */
 @media only screen and (min-width: 768px) {
-    /* Displays the banner image */
     .img-banner {
         display: block;
         width: 100%;
         padding-bottom: 30px;
     }
 
-    /* Limits wrapper width and centers it */
     .wrapper {
         width: 600px;
         margin: 0 auto;
     }
 
-    /* Adjusts heading padding */
     .img-info h2 {
         padding: 20px 0px 0px;
     }
 
-    /* Adjusts paragraph padding */
     .img-info p {
         padding: 20px 0px 0px;
     }     
 
-    /* Adds padding to the image */
     .img-TonuciK_fearandloathing {
         padding-top: 30px;
     }   
 
-    /* Adjusts the size of the button */
     .enter-btn {
         width: 200px;
     }
 }
 
-/* Styles for screens with a minimum width of 1000px */
 @media only screen and (min-width: 1000px) {
-
-    /* Expands the wrapper width */
     .wrapper {
         width: 1000px;
     } 
 
-    /* Adjusts image and text layout */
     .img-info {
         width: 50%;
         float: right;
     }
 
-    /* Adds padding to the heading */
     .img-info h2 {
         padding: 20px 0px 0px 30px;
     }
 
-    /* Adds padding to the paragraph */
     .img-info p {
         padding: 20px 0px 0px 30px;
     }  
 
-    /* Adjusts image padding and layout */
     .img-TonuciK_fearandloathing {
         padding-top: 0px;
         width: 50%;
         float: left;
     }
 
-    /* Expands the button width */
     .enter-btn {
         width: 250px;
-    }   
+    }
+}
+
+/* -------------------------------------- */
+/* Hover Image Transition (added section) */
+/* -------------------------------------- */
+
+/* Container that holds both the default and hover image */
+.hover-img-container {
+    position: relative;               /* Enables stacking of images */
+    display: inline-block;
+    width: 100%;                      /* Match existing image behavior */
+}
+
+/* Shared styles for both images */
+.hover-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+}
+
+/* Second image that shows on hover */
+.hover-img-alt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;                       /* Start invisible */
+    pointer-events: none;             /* Prevents interaction issues */
+}
+
+/* Hover state: fade in alternate image */
+.hover-img-container:hover .hover-img-alt {
+    opacity: 1;
+}
+
+/* Hover state: fade out original image */
+.hover-img-container:hover .default-img {
+    opacity: 0;
+}
+/* Responsive layout fix for hover image container */
+.hover-img-container.img-TonuciK_fearandloathing {
+    width: 100%;
+}
+
+/* Medium screen styles (tablet and up) */
+@media only screen and (min-width: 768px) {
+    .hover-img-container.img-TonuciK_fearandloathing {
+        padding-top: 30px;
+    }
+}
+
+/* Large screen styles (desktop) */
+@media only screen and (min-width: 1000px) {
+    .hover-img-container.img-TonuciK_fearandloathing {
+        width: 50%;
+        float: left;
+        padding-top: 0;
+    }
 }
