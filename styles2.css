@@ -1,0 +1,360 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: "Atma", sans-serif; /* Sets font-family */
+    background: #9fcbb1; /* Sets background color */
+}
+
+/* Styles for the banner image */
+.img-banner {
+    width: 100%; /* Ensures the image takes up full width */
+    display: block; /* Removes any extra space below the image */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #51745f; /* Dark green background */
+    padding: 10px 0; /* Padding for navbar */
+    text-align: center; /* Centers navbar content */
+}
+
+/* Navbar list styles */
+.navbar ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Flexbox layout for navbar links */
+    justify-content: center; /* Centers links */
+    gap: 20px; /* Space between navbar items */
+}
+
+/* Navbar list item styles */
+.navbar li {
+    display: inline; /* Inline display for navbar items */
+}
+
+/* Navbar link styles */
+.navbar a {
+    color: #fff200; /* Yellow text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 25px; /* Large text size */
+    text-transform: uppercase; /* Makes text uppercase */
+    padding: 5px 10px; /* Padding inside links */
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: #7b9e89; /* Light green background on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Navbar link active state styles */
+.navbar a.active {
+    color: #fff200; /* Yellow text */
+    background-color: #9fcbb1; /* Light green background */
+    padding: 5px 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Gallery container styles */
+.gallery {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px; /* Space between gallery items */
+    padding: 20px; /* Padding around gallery */
+    justify-items: center; /* Centers gallery items */
+}
+
+/* Individual gallery item styles */
+.gallery-item {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Horizontally center the content */
+    text-align: center; /* Center the text */
+}
+
+/* Gallery image styles */
+.gallery-item img {
+    width: 100%; /* Ensures image takes up full width */
+    height: auto; /* Maintains image aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Gallery image hover effect (rotate) */
+.gallery-item img:hover {
+    transform: rotate(15deg); /* Rotate image on hover */
+}
+
+/* Info section below the image */
+.gallery-item-info {
+    padding: 10px;
+    width: 100%; /* Ensures it spans the full width of the item */
+}
+
+/* Title styles */
+.gallery-item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black; /* Text color for title */
+}
+
+/* Description styles */
+.gallery-item-info p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.4;
+    color: black; /* Text color for description */
+}
+
+/* Hover effect on gallery items */
+.gallery-item:hover {
+    transform: translateY(-10px); /* Elevate the gallery item slightly on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+/* Responsive styles for even smaller screens */
+@media only screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #51745f; /* Dark green background */
+    color: #fff200; /* Yellow text */
+    padding: 20px 0; /* Padding inside footer */
+    text-align: center; /* Centers footer content */
+    margin-top: 50px; /* Adds space above footer */
+}
+
+/* Footer text paragraph styles */
+.footer p {
+    font-size: 14px; /* Smaller font size */
+    margin: 0; /* Removes default margin */
+}
+
+/* Gallery header styles */
+.gallery-header {
+    color: #fff200; /* Yellow text */
+    text-align: center; /* Centers header text */
+    padding: 40px 20px; /* Padding around header */
+    margin-top: 20px; /* Space above the header */
+}
+
+/* Gallery header title styles */
+.gallery-header h2 {
+    font-family: "Atma"; /* Custom font */
+    font-size: 36px; /* Large font size */
+    color: #fff200; /* Yellow text */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* About Me Section Styling */
+.about-me {
+    text-align: center; /* Center the text and image */
+    padding: 0px 0px; /* Add some padding around the section */
+    margin-top: 0px; /* Space above the section */
+}
+
+.about-container {
+    max-width: 800px; /* Limit the container width */
+    margin: 0 auto; /* Center the container */
+}
+
+.about-img {
+    width: 450px; /* Set a fixed width for the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    border: 5px solid black; /* Black border around the image */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+.about-paragraph {
+    font-size: 20px; /* Increase font size for the paragraph */
+    line-height: 1.6; /* Add space between lines for readability */
+    color: black; /* Black for the text */
+    max-width: 600px; /* Limit paragraph width for readability */
+    margin: 0 auto; /* Center the paragraph */
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+/* Blog Section */
+.blog {
+    padding: 40px 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align blog text to the left */
+}
+
+.blog-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-title {
+    font-size: 28px;
+    color: #51745f;
+    margin-bottom: 10px;
+    font-family: "Atma", sans-serif;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #51745f;
+    ;
+    margin-bottom: 15px;
+}
+
+.blog-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 40px;
+}
+
+/* Optional: Add a horizontal line between posts */
+.blog-post:not(:last-child) {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.shop-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    flex: 1;
+}
+
+.shop-arrow {
+    background-color: #51745f;
+    color: #fff200;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.shop-arrow:hover {
+    background-color: #7b9e89;
+}
+
+.shop-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.shop-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.shop-item img:hover {
+    transform: rotate(15deg);
+}
+
+.shop-item-info {
+    padding: 10px;
+    width: 100%;
+}
+
+.shop-item-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.shop-item-info p {
+    font-size: 14px;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .shop-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .shop-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Back to Top Button Styling */
+#back-to-top {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 15px; /* Padding inside the button */
+    font-size: 20px; /* Font size for the arrow */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for Back to Top Button */
+#back-to-top:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="img-banner" src="img/TonuciK_Banner.png" alt="Krista Tonuci banner">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="gallery-header">
+        <h2 id="typewriter">The Blog!</h2>
+    </section>
+
+    <section class="blog">
+        <div class="blog-container">
+
+            <article class="blog-post">
+                <h3 class="blog-title">Music for your Sunday</h3>
+                <p class="blog-date">Posted on April 27, 2025</p>
+                <p class="blog-content">
+                    A little weirdness for your Sunday? Yes please.
+                </p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QEP3Fw7znzE?si=84hT_GpaV30WT1G0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+           
+            <article class="blog-post">
+                <h3 class="blog-title">My Creative Process</h3>
+                <p class="blog-date">Posted on April 27, 2025</p>
+                <p class="blog-content">
+                    Every illustration starts with a burst of inspiration — sometimes it's a song, a dream, or a weird conversation I overheard in the grocery store. I love playing with color and composition in Illustrator, and I always add a little bit of attitude.
+                </p>
+            </article>
+
+            <article class="blog-post">
+                <h3 class="blog-title">Movies That Inspire Me</h3>
+                <p class="blog-date">Posted on April 20, 2025</p>
+                <p class="blog-content">
+                    From <em>Labyrinth</em> to <em>Zoolander</em>, I find endless inspiration in film. The costumes, the lighting, the chaos — it all ends up fueling my imagination and making its way into my art in some form.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Krista Tonuci</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Typewriter effect
+            var text = $("#typewriter").text();
+            $("#typewriter").text('');
+            var i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    $("#typewriter").append(text.charAt(i));
+                    i++;
+                    setTimeout(typeWriter, 150);
+                }
+            }
+            typeWriter();
+
+            // Back to Top Button logic
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+
+            $('#back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
