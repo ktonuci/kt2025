@@ -46,7 +46,7 @@ body {
 /* Styles for the paragraph inside .img-info */
 .img-info p {
     padding: 0px 30px 20px;
-    font-family: "Roboto Flex", sans-serif;
+    font-family: "Atma", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 16px;
@@ -131,10 +131,6 @@ body {
         width: 250px;
     }
 }
-
-/* -------------------------------------- */
-/* Hover Image Transition (added section) */
-/* -------------------------------------- */
 
 /* Container that holds both the default and hover image */
 .hover-img-container {
